@@ -31,10 +31,10 @@ nav {
     display: flex;
     padding: 30px;
     background: blue;
-    width: auto;
     flex-wrap: wrap;
     flex-direction: column;
-    height:280px;
+    height:40%;
+    width: auto;
     margin: 45px auto;
 }
 
@@ -42,9 +42,9 @@ nav {
     color: black;
     padding: 50px;
     background-color: lightgrey;
-    border: 10px solid black;
+    border: 5px solid black;
     text-align: center;
-    width: 30%;
+    width: 25%;
     margin: auto;
 
 }
