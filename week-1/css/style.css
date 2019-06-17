@@ -5,6 +5,57 @@
 
 }
 
+
+/* ----------- Nav Menu */
+header {
+    position: absolute;
+    top:0;
+    left:0;
+    padding: 0 100px;
+    background: darkgrey;
+    width:100%;
+    box-sizing: border-box;
+}
+
+header .logo {
+    color: black;
+    height:50px;
+    line-height: 50px;
+    font-size: 24px;
+    float: left;
+    font-weight: bold;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    margin: 0;
+    padding:0;
+    display: flex;
+}
+
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding:0 20px;
+    color: #fff; 
+    text-decoration: none;  
+}
+
+
+
+
+
+
+
+
 /* ----------- Welcome Banner */
 .welcome-banner {
     text-align: center;
@@ -29,7 +80,7 @@
     display: inline-block;
     background-color: lightgrey;
     text-align: center;
-    border: 0.1em solid black;
+    border: 0.2em solid white;
     margin-top: 1em;
     width: 100%;
 
@@ -89,10 +140,13 @@
 
 /*Request 1: Layout when screen width > 1200px*/
 @media screen and (min-width: 1201px) {
-    
+
     .section-container {
-    box-sizing: border-box
-    width: 1200px;
+        box-sizing: border-box;
+        margin: auto;
+        width: 1200px;
+        padding: 1em;
+
 }
 
     .col {
