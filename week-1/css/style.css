@@ -23,7 +23,6 @@
 
 .section-container {
     box-sizing: border-box
-
 }
 
 .col {
@@ -58,7 +57,7 @@
 @media screen and (min-width: 500px) and (max-width: 800px) {
     .col {
         width:50%;
-        margin-right: -4px;
+        margin-right: -40px;
     }
 
     .welcome-banner {
@@ -71,6 +70,13 @@
 
 /*Request 2: Layout when screen width > 800px and < 1200px*/
 @media screen and (min-width: 801px) and (max-width: 1200px) {
+    
+
+    .col {
+        width:50%;
+        margin-right: -40px;
+    }
+
     .welcome-banner {
         color: purple;
     }
@@ -83,6 +89,17 @@
 
 /*Request 1: Layout when screen width > 1200px*/
 @media screen and (min-width: 1201px) {
+    
+    .section-container {
+    box-sizing: border-box
+    width: 1200px;
+}
+
+    .col {
+        width:50%;
+        margin-right: -10px;
+    }
+
     .welcome-banner {
         color: red;
     }
