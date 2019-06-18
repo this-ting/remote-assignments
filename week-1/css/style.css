@@ -21,6 +21,7 @@ header .logo {
     color: black;
     height:50px;
     line-height: 3em;
+    padding:0 20px;
     font-size: 1em;
     float: left;
     font-weight: bold;
@@ -140,6 +141,7 @@ header nav ul li a {
     /* Shows nav menu in words*/
     header nav ul li {
     display: list-item;
+    padding-right: 1.5em;
     }
 
     /* Hides nav menu icon*/
@@ -178,7 +180,8 @@ header nav ul li a {
     
     /* Shows nav menu in words*/
     header nav ul li {
-    display: list-item;
+        display: list-item;
+        padding-right: 2em;
     }
 
     /* Increase font size for larger display*/
