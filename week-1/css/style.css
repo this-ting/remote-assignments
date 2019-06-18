@@ -54,6 +54,7 @@ header nav ul li a {
 .menu-toggle {
     float: right;
     line-height: 3em;
+    padding-right:1.5em;
 }
 
 
