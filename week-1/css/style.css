@@ -66,6 +66,7 @@ header nav ul li a {
     background-color: lightblue;
     line-height: 40vh;
     display: block;
+    color: white;
 }
 
 
@@ -96,14 +97,6 @@ header nav ul li a {
 
 
 /* ----------- Media Query */
-
-/* Request 4: Layout when screen width < 500px */
-@media screen and (max-width: 499px) {
-    .welcome-banner {
-        color: white;
-    }
-}
-
 
 /*Request 3: Layout when screen width > 500px and < 800px*/
 @media screen and (min-width: 500px) and (max-width: 800px) {
