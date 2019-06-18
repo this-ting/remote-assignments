@@ -11,7 +11,7 @@ header {
     position: absolute;
     top:0;
     left:0;
-    padding: 0 100px;
+    padding: 0 1em;
     background: darkgrey;
     width:100%;
     box-sizing: border-box;
@@ -20,8 +20,8 @@ header {
 header .logo {
     color: black;
     height:50px;
-    line-height: 50px;
-    font-size: 24px;
+    line-height: 3em;
+    font-size: 1em;
     float: left;
     font-weight: bold;
 }
@@ -44,7 +44,7 @@ header nav ul li {
 
 header nav ul li a {
     height: 50px;
-    line-height: 50px;
+    line-height: 3em;
     padding:0 20px;
     color: #fff; 
     text-decoration: none;  
@@ -52,11 +52,8 @@ header nav ul li a {
 
 .menu-toggle {
     float: right;
-    line-height: 50px;
+    line-height: 3em;
 }
-
-
-
 
 
 
@@ -103,9 +100,6 @@ header nav ul li a {
     .welcome-banner {
         color: lightgreen;
     }
-
-
-
 }
 
 
@@ -117,6 +111,14 @@ header nav ul li a {
         width:50%;
         margin-right: -40px;
     }
+    
+
+    /* Increase font size for display*/
+    header .logo,
+    .menu-toggle {
+        font-size: 1.25em;
+    }
+
 
     .welcome-banner {
         color: yellow;
@@ -143,6 +145,12 @@ header nav ul li a {
     /* Hides nav menu icon*/
     .menu-toggle {
         display: none;
+    }
+
+    /* Increase font size for larger display*/
+    header .logo,
+    header nav ul li a {
+        font-size: 1.5em;
     }
 
     .welcome-banner {
@@ -173,6 +181,12 @@ header nav ul li a {
     display: list-item;
     }
 
+    /* Increase font size for larger display*/
+    header .logo,
+    header nav ul li a {
+        font-size: 1.5em;
+    }
+
     /* Hides nav menu icon*/
     .menu-toggle {
         display: none;
@@ -181,9 +195,6 @@ header nav ul li a {
     .welcome-banner {
         color: red;
     }
-
-
-
 
 }
 
