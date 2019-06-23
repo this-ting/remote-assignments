@@ -1,0 +1,199 @@
+
+/* ----------- Universal */
+* {
+    font-family: Helvetica;
+
+}
+
+
+/* ----------- Nav Menu */
+header {
+    position: absolute;
+    top:0;
+    left:0;
+    padding: 0 1em;
+    background: darkgrey;
+    width:100%;
+    box-sizing: border-box;
+}
+
+header .logo {
+    color: black;
+    height:50px;
+    line-height: 3em;
+    padding:0 20px;
+    font-size: 1em;
+    float: left;
+    font-weight: bold;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    display: flex;
+}
+
+
+header nav ul li {
+    list-style: none;
+    display: none;
+}
+
+header nav ul li a {
+    height: 50px;
+    line-height: 3em;
+    padding:0 20px;
+    color: #fff; 
+    text-decoration: none;  
+}
+
+.menu-toggle {
+    float: right;
+    line-height: 3em;
+    padding-right:1.5em;
+}
+
+
+
+/* ----------- Welcome Banner */
+.welcome-banner {
+    text-align: center;
+    background-color: lightblue;
+    line-height: 40vh;
+    display: block;
+    color: white;
+}
+
+
+/* ----------- Section Content Box */
+.section-title {
+    text-align: center;
+
+}
+
+.section-container {
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
+    padding: 1em;
+}
+
+.col {
+    display: inline-block;
+    background-color: lightgrey;
+    text-align: center;
+    border: 0.2em solid white;
+    margin-top: 1em;
+    width: 100%;
+
+}
+
+
+
+
+/* ----------- Media Query */
+
+/*Request 3: Layout when screen width > 500px and < 800px*/
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    
+    /*Content Boxes in 2-columns layout.*/
+    .col {
+        width:50%;
+        margin-right: -40px;
+    }
+    
+
+    /* Increase font size for display*/
+    header .logo,
+    .menu-toggle {
+        font-size: 1.25em;
+    }
+
+
+    .welcome-banner {
+        color: yellow;
+    }
+
+}
+
+
+
+/*Request 2: Layout when screen width > 800px and < 1200px*/
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    
+    /*Content Boxes in 2-columns layout.*/
+    .col {
+        width:50%;
+        margin-right: -40px;
+    }
+    
+    /* Shows nav menu in words*/
+    header nav ul li {
+    display: list-item;
+    padding-right: 1.5em;
+    }
+
+    /* Hides nav menu icon*/
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Increase font size for larger display*/
+    header .logo,
+    header nav ul li a {
+        font-size: 1.5em;
+    }
+
+    .welcome-banner {
+        color: purple;
+        font-size: 3em;
+    }
+
+}
+
+
+
+
+
+/*Request 1: Layout when screen width > 1200px*/
+@media screen and (min-width: 1201px) {
+    
+    /*Total width of content boxes should be fixed in 1200px.*/
+    .section-container {
+        width: 1200px;
+    }
+    /*Content Boxes in 2-columns layout.*/
+    .col {
+        width:50%;
+        margin-right: -10px;
+    }
+    
+    /* Shows nav menu in words*/
+    header nav ul li {
+        display: list-item;
+        padding-right: 2em;
+    }
+
+    /* Increase font size for larger display*/
+    header .logo,
+    header nav ul li a {
+        font-size: 1.5em;
+    }
+
+    /* Hides nav menu icon*/
+    .menu-toggle {
+        display: none;
+    }
+    
+    .welcome-banner {
+        color: red;
+        font-size: 3em;
+    }
+
+}
+
+
+
+
