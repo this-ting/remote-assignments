@@ -103,7 +103,7 @@ div button {
 }
 
 /* ----------- Hide Button Collapsible Content Boxes */
-.button {
+.section-show {
     display: none
 }
 
