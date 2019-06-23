@@ -12,13 +12,13 @@ header {
     top:0;
     left:0;
     padding: 0 1em;
-    background: darkgrey;
+    background: #8C8C8C;
     width:100%;
     box-sizing: border-box;
 }
 
 header .logo {
-    color: black;
+    color: #0D0D0D;
     height:50px;
     line-height: 3em;
     padding: 0.75em;
@@ -160,6 +160,12 @@ div button {
         font-size: 1.5em;
     }
 
+    /* Hover option for nav menu */
+    header nav ul li a:hover
+    {
+        color: #262626;
+    }
+
     .welcome-banner {
         color: purple;
         font-size: 3em;
@@ -194,6 +200,13 @@ div button {
     header .logo,
     header nav ul li a {
         font-size: 1.5em;
+        display: block;
+    }
+
+    /* Hover option for nav menu */
+    header nav ul li a:hover
+    {
+        color: #262626;
     }
 
     /* Hides nav menu icon*/
