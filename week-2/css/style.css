@@ -102,6 +102,10 @@ div button {
 
 }
 
+/* ----------- Hide Button Collapable Content Boxes */
+.button {
+    display: none
+}
 
 /* ----------- Media Query */
 
