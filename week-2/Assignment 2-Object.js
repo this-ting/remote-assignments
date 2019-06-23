@@ -38,15 +38,12 @@ function calculate(args){
 } console.log(result);
 }
 
-
 // First way of calling via object in calculate function parameters
-
 calculate({
     n1: 1,
     n2: 2,
     op: "-"
 })
-
 
 // Second way of calling via definging object variable
 var args1 = {
@@ -54,7 +51,4 @@ var args1 = {
     n2: 4,
     op: "+"
 };
-
 calculate(args1);
-
-
