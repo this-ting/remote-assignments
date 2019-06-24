@@ -16,15 +16,15 @@ max(1, 2, 4, 5);​ // result to 5
 max(5, 2, 7, 1, 6); ​// result to 7
 */
 
-function max(arg){
+function max(...numbers){
     var greater = 0;
-    for (var i = 0 ; i < arg.length; i ++ ) {
-        if (arg[i] > greater) {
-            greater = arg[i];
+    for (var i = 0 ; i < numbers.length; i ++ ) {
+        if (numbers[i] > greater) {
+            greater = numbers[i];
         } 
     }
     console.log(greater);
 }
 
-max([5, 2, 7, 1, 6]);
-max([1, 2, 4, 5]);
+max(5, 2, 7, 1, 6);
+max(1, 2, 4, 5);
