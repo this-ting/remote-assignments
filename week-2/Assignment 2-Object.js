@@ -38,6 +38,16 @@ function calculate(args){
 } console.log(result);
 }
 
+
+// Using the  Object() constructor
+var equation = new Object();
+equation['n1'] = 4;
+equation['n2'] = 6;
+equation['op'] = '+';
+
+calculate(equation);
+
+
 // Using object literal in calculate function parameters 
 calculate({
     n1: 1,
