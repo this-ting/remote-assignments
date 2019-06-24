@@ -13,3 +13,16 @@ const changeText = document.querySelector("h1.welcome-banner");
 clickBanner.addEventListener ('click', () => {
     changeText.textContent = "Have a Good Time!";
 })
+
+// Create mobile menu display
+const openNav = document.querySelector("i.fa-ellipsis-h");
+const closeNav = document.querySelector("i.fa-times");
+const slide = document.getElementById("navigation");
+
+openNav.addEventListener ('click', () => {
+    slide.style.display = "block";
+})
+
+closeNav.addEventListener ('click', () => {
+    slide.style.display = "none";
+})

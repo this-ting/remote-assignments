@@ -29,14 +29,14 @@ header .logo {
 }
 
 header nav {
-    /* display: none; */
     position: absolute;
     width: 100%;
+    left: 0;
     height: calc(100vh - 4.50em);
     background: #333;
     top: 4.50em;
-    left: 0;
     transition: 0.5s;
+    display: none;
 }
 
 header nav ul li {
@@ -50,9 +50,11 @@ header nav ul li a {
     height: 50px;
     line-height: 3em;
     padding:0 20px;
-    color: #fff;   
+    color: #fff;
+    transition: all 0.3s ease-out;
 }
 
+header nav ul li a:hover,
 header nav ul li a:hover
 {
     color: #262626;
