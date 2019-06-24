@@ -26,35 +26,18 @@ header .logo {
     float: left;
     font-weight: bold;
     margin: auto;
-
+    vertical-align: middle;
 }
 
 header nav {
-    float: right;
-}
-
-header nav ul {
-    display: flex;
-}
-
-
-header nav ul li {
-    list-style: none;
     display: none;
-}
-
-header nav ul li a {
-    height: 50px;
-    line-height: 3em;
-    padding:0 20px;
-    color: #fff; 
-    text-decoration: none;  
 }
 
 .menu-toggle {
     float: right;
     line-height: 3em;
-    padding-right:1.5em;
+    padding:0.75em;
+    vertical-align: middle;
 }
 
 
@@ -108,6 +91,37 @@ div button {
 }
 
 /* ----------- Media Query */
+/*Request 3: Layout when screen width > 500px*/
+@media screen and (max-width: 499px) {
+    header nav {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh-3.75em);
+        background: #333;
+        top: 5-px;
+        left:0;
+        transition: 0.5s;
+    }
+
+    header nav ul li {
+        list-style: contents;
+        display: contents;
+    }
+
+    header nav ul {
+        display: block;
+
+
+    }
+
+
+}
+
+
+
+
+
+
 
 /*Request 3: Layout when screen width > 500px and < 800px*/
 @media screen and (min-width: 500px) and (max-width: 800px) {
@@ -144,9 +158,23 @@ div button {
     }
     
     /* Shows nav menu in words*/
-    header nav ul li {
-    display: list-item;
-    padding-right: 1.5em;
+    header nav {
+        display: contents;
+        padding-right: 1.5em;
+    }
+
+    header nav ul {
+        display: flex;
+        float:right;
+        list-style: none;
+    }
+
+    header nav ul li a {
+        height: 50px;
+        line-height: 3em;
+        padding:0 20px;
+        color: #fff; 
+        text-decoration: none;  
     }
 
     /* Hides nav menu icon*/
@@ -220,7 +248,3 @@ div button {
     }
 
 }
-
-
-
-
