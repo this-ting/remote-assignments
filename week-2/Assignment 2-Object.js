@@ -38,17 +38,18 @@ function calculate(args){
 } console.log(result);
 }
 
-// First way of calling via object in calculate function parameters
+// Using object literal in calculate function parameters 
 calculate({
     n1: 1,
     n2: 2,
     op: "-"
 })
 
-// Second way of calling via definging object variable
+
+// Using JSON literal to call 
 var args1 = {
-    n1: 3,
-    n2: 4,
-    op: "+"
+    "n1": 3,
+    "n2": 4,
+    "op": "+"
 };
 calculate(args1);
