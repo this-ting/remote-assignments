@@ -177,10 +177,6 @@ div button {
         text-decoration: none;  
     }
 
-    /* Hides nav menu icon*/
-    .menu-toggle {
-        display: none;
-    }
 
     /* Increase font size for larger display*/
     header .logo,
@@ -194,6 +190,11 @@ div button {
         color: #262626;
     }
 
+    /* Hides nav menu icon*/
+    .menu-toggle {
+        display: none;
+    }
+    
     .welcome-banner {
         color: purple;
         font-size: 3em;
@@ -219,16 +220,31 @@ div button {
     }
     
     /* Shows nav menu in words*/
-    header nav ul li {
-        display: list-item;
-        padding-right: 2em;
+
+    header nav {
+        display: contents;
+        padding-right: 1.5em;
     }
+
+    header nav ul {
+        display: flex;
+        float:right;
+        list-style: none;
+    }
+
+    header nav ul li a {
+        height: 50px;
+        line-height: 3em;
+        padding:0 20px;
+        color: #fff; 
+        text-decoration: none;  
+    }
+
 
     /* Increase font size for larger display*/
     header .logo,
     header nav ul li a {
         font-size: 1.5em;
-        display: block;
     }
 
     /* Hover option for nav menu */
