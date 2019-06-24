@@ -29,12 +29,11 @@ header .logo {
 }
 
 header nav {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    height: calc(100vh - 4.50em);
+    position: fixed;
+    width: 50vh;
+    right: 0;
+    height: 100vh;
     background: #333;
-    top: 4.50em;
     transition: 0.5s;
     display: none;
 }
@@ -126,12 +125,6 @@ div button {
 }
 
 /* ----------- Media Query */
-/*Request 3: Layout when screen width > 500px*/
-/* @media screen and (max-width: 499px) {
-
-
-
-
 
 /*Request 3: Layout when screen width > 500px and < 800px*/
 @media screen and (min-width: 500px) and (max-width: 800px) {
