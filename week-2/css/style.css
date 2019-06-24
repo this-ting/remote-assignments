@@ -60,7 +60,7 @@ header nav ul li a:hover
     color: #262626;
 }
 
-.menu-toggle {
+.fa-ellipsis-h {
     float: right;
     line-height: 3em;
     padding:0.75em;
@@ -72,6 +72,9 @@ header nav ul li a:hover
     padding: 1em;
 }
 
+.fas:hover {
+    color: #BFBFBF;
+}
 
 /* ----------- Welcome Banner */
 .welcome-banner {
@@ -141,7 +144,7 @@ div button {
 
     /* Increase font size for display*/
     header .logo,
-    .menu-toggle {
+    .fa-ellipsis-h {
         font-size: 1.25em;
     }
 
@@ -197,8 +200,8 @@ div button {
     }
 
     /* Hides nav menu icon*/
-    .menu-toggle {
-        display: none;
+    .fas {
+        visibility: hidden;
     }
     
     .welcome-banner {
@@ -260,8 +263,8 @@ div button {
     }
 
     /* Hides nav menu icon*/
-    .menu-toggle {
-        display: none;
+    .fas {
+        visibility: hidden;
     }
     
     .welcome-banner {
