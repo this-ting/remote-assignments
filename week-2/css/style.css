@@ -18,19 +18,46 @@ header {
 }
 
 header .logo {
-    color: #0D0D0D;
+    float: left;
     height:50px;
     line-height: 3em;
     padding: 0.75em;
     font-size: 1em;
-    float: left;
     font-weight: bold;
     margin: auto;
     vertical-align: middle;
+    color: #0D0D0D;
 }
 
 header nav {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 4.50em);
+    background: #333;
+    top: 4.50em;
+    left: 0;
+    transition: 0.5s;
+}
+
+header nav ul li {
+    display: block;
+    text-decoration: none;
+}
+
+header nav ul li a {
+    display: block;
+    text-decoration: none;
+    height: 50px;
+    line-height: 3em;
+    padding:0 20px;
+    color: #fff;   
+
+}
+
+header nav ul li a:hover
+{
+    color: #262626;
 }
 
 .menu-toggle {
@@ -40,6 +67,10 @@ header nav {
     vertical-align: middle;
 }
 
+.fa-times {
+    float: right;
+    padding: 1em;
+}
 
 
 /* ----------- Welcome Banner */
@@ -92,32 +123,7 @@ div button {
 
 /* ----------- Media Query */
 /*Request 3: Layout when screen width > 500px*/
-@media screen and (max-width: 499px) {
-    header nav {
-        position: absolute;
-        width: 100%;
-        height: calc(100vh-3.75em);
-        background: #333;
-        top: 5-px;
-        left:0;
-        transition: 0.5s;
-    }
-
-    header nav ul li {
-        list-style: contents;
-        display: contents;
-    }
-
-    header nav ul {
-        display: block;
-
-
-    }
-
-
-}
-
-
+/* @media screen and (max-width: 499px) {
 
 
 
