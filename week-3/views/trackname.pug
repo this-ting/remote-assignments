@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+    h1 Welcome human being!
+    form(action='/myName', method='POST')
+        label(for='使用者的輸入​') What is your name?
+            input(
+                type='text', 
+                placeholder='Enter Name', 
+                name='username')
+        button(type='submit') Submit
+

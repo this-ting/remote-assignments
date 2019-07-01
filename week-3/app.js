@@ -24,16 +24,27 @@ app.get('/getData', (req, res) => {
 
 // My Name (cookies)
 app.get('/myName', (req, res) => {
-    res.render('myname', {name:req.cookies.username});
+    const name = req.cookies.username;
+    if (name) {
+        res.render('myname', {name})
+    } else {
+        res.redirect('/trackName');
+    }
+});
+
+app.post('/myName', (req, res) => {
+    res.cookie('username', req.body.username);
+    res.render('myname')
 });
 
 app.post('/trackName', (req, res) => {
     res.cookie('username', req.body.username);
-    res.render('myname', {name:req.body.username});
+    res.render('trackname');
 });
 
+
 app.get('/trackName', (req, res) => {
-    res.redirect(303,'/myName')
+    res.render('trackname');
 });
 
 app.listen(3000, () => {
