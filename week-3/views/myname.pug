@@ -3,5 +3,5 @@ extends layout.pug
 block content
     h1 Welcome human being!
         h2 Your name is #{name}
-
-
+        form(action='/goodbye', method='POST')
+            button(type="submit") Good-bye!

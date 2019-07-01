@@ -29,7 +29,7 @@ app.get('/myName', (req, res) => {
         res.render('myname', {name})
     } else {
         res.redirect('/trackName');
-    }
+    };
 });
 
 app.post('/myName', (req, res) => {
@@ -42,9 +42,13 @@ app.post('/trackName', (req, res) => {
     res.render('trackname');
 });
 
-
 app.get('/trackName', (req, res) => {
     res.render('trackname');
+});
+
+app.post('/goodbye', (req, res) => {
+    res.clearCookie('username', '/myName');
+    res.redirect('/myName');
 });
 
 app.listen(3000, () => {
