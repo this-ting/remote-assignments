@@ -32,6 +32,9 @@ app.post('/trackName', (req, res) => {
     res.render('myname', {name:req.body.username});
 });
 
+app.get('/trackName', (req, res) => {
+    res.redirect(303,'/myName')
+});
 
 app.listen(3000, () => {
     console.log('The application is running on localhost:3000');
