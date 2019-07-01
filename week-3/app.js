@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
-app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser());
 
 // Tells express what template to use
 app.set('view engine', 'pug');
@@ -22,11 +24,11 @@ app.get('/getData', (req, res) => {
 
 // My Name (cookies)
 app.get('/myName', (req, res) => {
-    res.render('myname');
+    res.render('myname', {name:req.cookies.username});
 });
 
 app.post('/trackName', (req, res) => {
-    console.dir(req.body);
+    res.cookie('username', req.body.username);
     res.render('myname', {name:req.body.username});
 });
 
