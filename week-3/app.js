@@ -22,7 +22,7 @@ app.get('/getData', (req, res) => {
 });
 
 
-// My Name (cookies)
+// Assignment 4: My Name (Cookies)
 app.get('/myName', (req, res) => {
     const name = req.cookies.username;
     if (name) {
