@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({extended: false}))
 
 // Tells express what template to use
 app.set('view engine', 'pug');
@@ -17,10 +20,15 @@ app.get('/getData', (req, res) => {
 });
 
 
-// sandbox
-app.get('/sandbox', (req, res) => {
-    res.render('main')
-})
+// My Name (cookies)
+app.get('/myName', (req, res) => {
+    res.render('myname');
+});
+
+app.post('/trackName', (req, res) => {
+    console.dir(req.body);
+    res.render('myname', {name:req.body.username});
+});
 
 
 app.listen(3000, () => {
