@@ -11,8 +11,10 @@ app.set('view engine', 'pug');
 
 // Importing from routes/index.js
 const routes = require('./routes');
-
 app.use(routes);
+
+// Setting up express to serve static files
+app.use(express.static('public'))
 
 
 app.listen(3000, () => {
