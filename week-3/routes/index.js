@@ -1,14 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-//Assignment 1
-// sends Hello message when launched
+//Assignment 1: Set up web server
 router.get('/', (req, res) => {
     res.send('<h1>Hello my server!</h1>');
 });
 
-//Assignment 2
- http://localhost:3000/getData​, show "Lack of Parameter" message in the page.
+//Assignment 2: /getData
 router.get('/getData', (req, res) => {
     const number = req.query.number;
     if (req.query.number === 'xyz') {
@@ -20,7 +18,7 @@ router.get('/getData', (req, res) => {
     };
 });
 
-// Assignment 4: My Name (Cookies)
+// Assignment 4: /myName (Cookies)
 router.get('/myName', (req, res) => {
     const name = req.cookies.username;
     if (name) {
