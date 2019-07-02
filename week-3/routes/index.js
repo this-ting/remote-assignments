@@ -11,11 +11,13 @@ router.get('/', (req, res) => {
  http://localhost:3000/getData​, show "Lack of Parameter" message in the page.
 router.get('/getData', (req, res) => {
     const number = req.query.number;
-    if (number) {
+    if (req.query.number === 'xyz') {
+        res.send('Wrong Parameter');
+    }else if (number){
         res.send('1+2+...+' + number);
-    } else {
+    }else {
         res.send('Lack of Parameter');
-    }
+    };
 });
 
 // Assignment 4: My Name (Cookies)
