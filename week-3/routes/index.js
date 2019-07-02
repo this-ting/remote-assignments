@@ -38,7 +38,7 @@ router.post('/myName', (req, res) => {
 
 router.post('/trackName', (req, res) => {
     res.cookie('username', req.body.username);
-    res.render('trackname');
+    res.redirect('/myName');
 });
 
 router.get('/trackName', (req, res) => {
