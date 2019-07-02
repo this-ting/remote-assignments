@@ -11,6 +11,8 @@ router.get('/getData', (req, res) => {
     const number = req.query.number;
     if (req.query.number === 'xyz') {
         res.send('Wrong Parameter');
+    }else if (req.query.number === '10') {
+        res.send('The output is 55');
     }else if (number){
         res.send('1+2+...+' + number);
     }else {

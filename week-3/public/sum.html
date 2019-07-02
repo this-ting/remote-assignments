@@ -3,17 +3,26 @@
 <head>
     <title>Sum Game</title>
     <script>
-        const xhr = new XMLHttpRequest();
+        function loadDoc() {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("answer").innerHTML = this.responseText;
+                }
+            };
+            xhr.open('GET', '/getData?number=10', true);
+            xhr.send();
+            };
     </script>
 </head>
 
 <body>
     <h1>Let's play a game</h1>
     <p>Input a number please: 
-        <input type='text', placeholder='Enter a number'>
-        <button type='submit'>Submit</button>
+        <input type='text' placeholder='Enter a number'>
+        <button type='submit' id="submit" onclick="loadDoc()">Submit</button>
     </p>
-    
+    <p id="answer"></p>
 </body>
 
 </html>
