@@ -9,12 +9,14 @@ router.get('/', (req, res) => {
 //Assignment 2: /getData
 router.get('/getData', (req, res) => {
     const number = req.query.number;
-    if (req.query.number === 'xyz') {
+    if (number !== NaN ) {
         res.send('Wrong Parameter');
-    }else if (req.query.number === '10') {
-        res.send('The output is 55');
     }else if (number){
-        res.send('1+2+...+' + number);
+        let sum = 0;
+        for (let i=1 ; i <= number ; i++) {
+            sum = sum + i;
+        };
+        res.send(`${sum}`);
     }else {
         res.send('Lack of Parameter');
     };
