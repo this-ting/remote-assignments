@@ -2,26 +2,33 @@
 <html>
 <head>
     <title>Sum Game</title>
-    <script>
+    <script>       
         function loadDoc() {
+            let input = document.querySelector('input').value;
             const xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("answer").innerHTML = this.responseText;
+                    if ( isNaN(input) === true ) {
+                        document.getElementById("answer").innerHTML = this.responseText;
+                    }else {
+                        let inputNum = document.querySelector('input').valueAsNumber;
+                        document.getElementById("answer").innerHTML = this.responseText;
+                        };  
                 }
-            };
-            xhr.open('GET', '/getData?number=10', true);
+            }
+            xhr.open('GET', `/getData?number=${input}`, true);
             xhr.send();
-            };
+        };
     </script>
 </head>
 
 <body>
     <h1>Let's play a game</h1>
-    <p>Input a number please: 
+    <div>
+        Input a number please: 
         <input type='text' placeholder='Enter a number'>
-        <button type='submit' id="submit" onclick="loadDoc()">Submit</button>
-    </p>
+        <input type='submit' onclick="loadDoc()">
+    </div>
     <p id="answer"></p>
 </body>
 

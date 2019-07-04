@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 //Assignment 2: /getData
 router.get('/getData', (req, res) => {
     const number = req.query.number;
-    if (number !== NaN ) {
+    if ( isNaN(number) === true ) {
         res.send('Wrong Parameter');
     }else if (number){
         let sum = 0;
