@@ -1,3 +1,4 @@
+/* Universal settings for .App */
 .App {
   text-align: center;
 }
@@ -10,7 +11,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,3 +23,64 @@
   color: #61dafb;
 }
 
+/* _______________________________________________________ */
+
+
+
+div .logo {
+  float: left;
+  height:50px;
+  line-height: 3em;
+  padding: 0.75em;
+  font-size: 1em;
+  font-weight: bold;
+  margin: auto;
+  vertical-align: middle;
+  color: #0D0D0D;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- Welcome Banner */
+.welcome-banner {
+  text-align: center;
+  background-color: lightblue;
+  line-height: 40vh;
+  display: block;
+  color: white;
+  font-size: 3em;
+}
+
+
+
+
+
+/* ----------- Section Content Box */
+.section-title {
+  text-align: center;
+
+}
+
+.section-container {
+  box-sizing: border-box;
+  width: 80%;
+  margin: auto;
+  padding: 1em;
+}
+
+.col {
+  display: inline-block;
+  background-color: lightgrey;
+  text-align: center;
+  border: 0.2em solid white;
+  margin-top: 1em;
+  width: 100%;
+}
