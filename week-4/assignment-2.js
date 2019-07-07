@@ -1,5 +1,6 @@
 /*Assignment 2: Callback Function and Advanced HTML DOM
-Complete the functions below to make AJAX call to a URL by GET method, and show the response data in the page. You may render UI with any style.
+Complete the functions below to make AJAX call to a URL by GET method, and 
+show the response data in the page. You may render UI with any style.
  
 function ajax(src, callback){
     // your code here
@@ -14,11 +15,13 @@ ajax("https://cwpeng.github.io/live-records-samples/data/products.json", functio
 
 
 function ajax(src, callback){
-    // your code here
+    xhttp.open("GET", src, true);
+    xhttp.send();
+    console.log()
 }
 function render(data){
     // your code here.
-    // ​document.createElement()​ and a​ ppendChild()​ methods are preferred. 
+    // ​document.createElement()​ and a​ppendChild()​ methods are preferred. 
 }
 ajax("https://cwpeng.github.io/live-records-samples/data/products.json", function(response){ 
     render(response);
