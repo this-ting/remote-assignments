@@ -15,6 +15,9 @@ function App() {
 
 
       <ActionButton />
+
+      <SectionContent />
+
       <Footer />
 
 
@@ -26,7 +29,7 @@ function App() {
 class WelcomeLogo extends React.Component {
   render() {
     return (
-      <div class="logo">Welcome Title/Logo</div>
+      <div className="logo">Welcome Title/Logo</div>
     );
   }
 }
@@ -37,7 +40,7 @@ class Navigation extends React.Component {
       <div>
         <nav id = "navigation">
           <ul>
-              <i class="fas fa-times"></i>
+              <i className="fas fa-times"></i>
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
@@ -55,7 +58,7 @@ class Navigation extends React.Component {
 class WelcomeBanner extends React.Component {
   render() {
     return (
-      <div class="welcome-banner">Welcome Message</div>
+      <div className="welcome-banner">Welcome Message</div>
     );
   }
 }
@@ -64,8 +67,8 @@ class WelcomeBanner extends React.Component {
 class SectionContent extends React.Component {
   render() {
     return (
-      <div class ="section-container">
-        <h1 class="section-title"> Section Title</h1>
+      <div className ="section-container">
+        <h1 className="section-title"> Section Title</h1>
         <SectionBox />
       </div>
     );
@@ -75,11 +78,32 @@ class SectionContent extends React.Component {
 class SectionBox extends React.Component {
   render() {
     return (
-      <div class="col">
+      <div className="col">
         <h1 > Content Box 1</h1>
+          <InnerBox />
         <h1 > Content Box 2</h1>
+          <InnerBox />
         <h1 > Content Box 3</h1>
+        <InnerBox />
         <h1 > Content Box 3</h1>
+        <InnerBox />      
+      </div>
+    );
+  }
+}
+
+class InnerBox extends React.Component {
+  render() {
+    return (
+      <div >
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
       </div>
     );
   }
