@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      
       <header className="App-header">
         <WelcomeLogo />
         <Navigation />
@@ -13,15 +14,11 @@ function App() {
 
       <SectionContent />
 
-
       <ActionButton />
 
       <SectionContent />
 
       <Footer />
-
-
-
     </div>
   );
 }
@@ -40,12 +37,32 @@ class Navigation extends React.Component {
       <div>
         <nav id = "navigation">
           <ul>
-              <i className="fas fa-times"></i>
+              <ExitIcon />
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
           </ul>
         </nav>
+        <NavIcon />
+      </div>
+    );
+  }
+}
+
+class ExitIcon extends React.Component {
+  render() {
+    return (
+      <div>
+        <i className="fas fa-times"></i>
+      </div>
+    );
+  }
+}
+
+class NavIcon extends React.Component {
+  render() {
+    return (
+      <div>
         <i class="fas fa-ellipsis-h"></i>
       </div>
     );
