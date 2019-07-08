@@ -19,7 +19,7 @@
 }
 
 nav {
-  /* position: fixed; */
+  position: fixed;
   width: 50vw;
   right: 0;
   height: 100vh;
@@ -159,7 +159,6 @@ nav ul {
   }
 
 nav ul li a {
-    /* height: 50px; */
     padding:0 20px;
     color: #fff; 
     text-decoration: none;  

@@ -7,6 +7,7 @@ function App() {
       <header className="Header-container">
         <WelcomeLogo />
         <Navigation />
+        <NavIcon />
       </header>
       <WelcomeBanner />
       <h1 className="section-title"> Section Title</h1>
@@ -37,27 +38,50 @@ class Navigation extends React.Component {
               <li><a href="#">Contact</a></li>
           </ul>
         </nav>
-        <NavIcon />
       </div>
     );
   }
 }
 
 class NavIcon extends React.Component {
+  state = {
+    showNav: false
+  }
+
+  showNav = () => {
+    console.log('can you see me?!?!?');
+    this.setState({
+      showNav: document.getElementById("navigation").style.display = "block"
+    });
+  }
+
   render() {
     return (
       <div>
-        <i class="fas fa-ellipsis-h"></i>
+        <i class="fas fa-ellipsis-h" onClick={this.showNav}></i>
       </div>
     );
   }
 }
 
 class ExitIcon extends React.Component {
+  state = {
+    closeNav: true
+  }
+
+  
+  closeNav = () => {
+    console.log('SEE ME NOW?!?!?');
+    this.setState({
+      closeNav: document.getElementById("navigation").style.display = "none"
+    });
+  }
+  
+  
   render() {
     return (
       <div>
-        <i className="fas fa-times"></i>
+        <i className="fas fa-times" onClick={this.closeNav}></i>
       </div>
     );
   }
