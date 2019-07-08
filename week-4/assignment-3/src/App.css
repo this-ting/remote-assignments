@@ -134,7 +134,12 @@ div button {
   /*Content Boxes in 2-columns layout.*/
   .col {
     width:50%;
-    margin-right: -40px;
+    margin-right: -20px;
+  }
+  .section-container:after {
+    content: "";
+    display: table;
+    clear: both;
   }
   
 
@@ -161,9 +166,8 @@ div button {
   /*Content Boxes in 2-columns layout.*/
   .col {
     width:50%;
-    margin-right: -40px;
+    margin-right: -20px;
   }
-  
   /* Shows nav menu in words*/
  nav {
     display: contents;

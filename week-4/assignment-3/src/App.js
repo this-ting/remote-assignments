@@ -77,6 +77,9 @@ class SectionContent extends React.Component {
       <div className ="section-container">
         <h1 className="section-title"> Section Title</h1>
         <SectionBox />
+        <SectionBox />
+        <SectionBox />
+        <SectionBox />
       </div>
     );
   }
@@ -86,14 +89,8 @@ class SectionBox extends React.Component {
   render() {
     return (
       <div className="col">
-        <h3 > Content Box 1</h3>
-        <InnerBox />
-        <h3>  Content Box 2</h3>
-        <InnerBox />
-        <h3>  Content Box 3</h3>
-        <InnerBox />
-        <h3>  Content Box 3</h3>
-        <InnerBox />      
+        <h3 > Content Box </h3>
+        <InnerBox />     
       </div>
     );
   }
