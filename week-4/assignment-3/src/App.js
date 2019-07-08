@@ -9,6 +9,7 @@ function App() {
         <Navigation />
       </header>
       <WelcomeBanner />
+      <h1 className="section-title"> Section Title</h1>
       <SectionContent />
       <ActionButton />
       <Footer />
@@ -17,17 +18,9 @@ function App() {
 }
 
 class WelcomeLogo extends React.Component {
-  state = {
-    
-  }
-
-  changeMessage() {
-    console.log('am i changing the message?')
-  }
-  
-  render() {
+    render() {
     return (
-      <div className="logo" onClick={this.changeMessage} >Welcome Title/Logo</div>
+      <div className="logo" >Welcome Title/Logo</div>
     );
   }
 }
@@ -74,7 +67,7 @@ class WelcomeBanner extends React.Component {
   state = {
     title: 'Welcome Message'
   }
-  
+
   changeBanner = () => {
     this.setState({
       title: 'Have a good day!'
@@ -88,11 +81,10 @@ class WelcomeBanner extends React.Component {
   }
 }
 
-class SectionContent extends React.Component {
+class SectionContent extends React.Component {  
   render() {
     return (
       <div className ="section-container">
-        <h1 className="section-title"> Section Title</h1>
         <SectionBox />
         <SectionBox />
         <SectionBox />
@@ -130,13 +122,27 @@ class InnerBox extends React.Component {
   }
 }
 
-class ActionButton extends React.Component {
+class ActionButton extends React.Component {  
+  state = {
+    showContent:false
+  }
 
+  showContent = () => {
+    console.log('RECIEVED');
+    this.setState({
+      showContent:true
+    });
+  }
   
   render() {
     return (
       <div>
-        <button type="button" >Call to Action!</button>
+        <button type="button" onClick={this.showContent}>Call to Action!</button>
+        {this.state.showContent ?
+           <SectionContent /> :
+           null
+        }
+
       </div>
     );
   }
