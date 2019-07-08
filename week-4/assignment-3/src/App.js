@@ -17,9 +17,17 @@ function App() {
 }
 
 class WelcomeLogo extends React.Component {
+  state = {
+    
+  }
+
+  changeMessage() {
+    console.log('am i changing the message?')
+  }
+  
   render() {
     return (
-      <div className="logo">Welcome Title/Logo</div>
+      <div className="logo" onClick={this.changeMessage} >Welcome Title/Logo</div>
     );
   }
 }
@@ -63,9 +71,19 @@ class ExitIcon extends React.Component {
 }
 
 class WelcomeBanner extends React.Component {
+  state = {
+    title: 'Welcome Message'
+  }
+  
+  changeBanner = () => {
+    this.setState({
+      title: 'Have a good day!'
+    });
+  }
+  
   render() {
     return (
-      <div className="welcome-banner">Welcome Message</div>
+      <div className="welcome-banner" onClick={this.changeBanner}>{this.state.title}</div>
     );
   }
 }
@@ -113,6 +131,8 @@ class InnerBox extends React.Component {
 }
 
 class ActionButton extends React.Component {
+
+  
   render() {
     return (
       <div>
