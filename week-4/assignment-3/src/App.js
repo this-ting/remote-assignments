@@ -9,15 +9,9 @@ function App() {
         <WelcomeLogo />
         <Navigation />
       </header>
-
       <WelcomeBanner />
-
       <SectionContent />
-
       <ActionButton />
-
-      <SectionContent />
-
       <Footer />
     </div>
   );
@@ -49,16 +43,6 @@ class Navigation extends React.Component {
   }
 }
 
-class ExitIcon extends React.Component {
-  render() {
-    return (
-      <div>
-        <i className="fas fa-times"></i>
-      </div>
-    );
-  }
-}
-
 class NavIcon extends React.Component {
   render() {
     return (
@@ -69,8 +53,15 @@ class NavIcon extends React.Component {
   }
 }
 
-
-
+class ExitIcon extends React.Component {
+  render() {
+    return (
+      <div>
+        <i className="fas fa-times"></i>
+      </div>
+    );
+  }
+}
 
 class WelcomeBanner extends React.Component {
   render() {
@@ -79,7 +70,6 @@ class WelcomeBanner extends React.Component {
     );
   }
 }
-
 
 class SectionContent extends React.Component {
   render() {
@@ -96,13 +86,13 @@ class SectionBox extends React.Component {
   render() {
     return (
       <div className="col">
-        <h1 > Content Box 1</h1>
-          <InnerBox />
-        <h1 > Content Box 2</h1>
-          <InnerBox />
-        <h1 > Content Box 3</h1>
+        <h3 > Content Box 1</h3>
         <InnerBox />
-        <h1 > Content Box 3</h1>
+        <h3>  Content Box 2</h3>
+        <InnerBox />
+        <h3>  Content Box 3</h3>
+        <InnerBox />
+        <h3>  Content Box 3</h3>
         <InnerBox />      
       </div>
     );
@@ -136,9 +126,6 @@ class ActionButton extends React.Component {
   }
 }
 
-
-
-
 class Footer extends React.Component {
   render() {
     return (
@@ -146,10 +133,5 @@ class Footer extends React.Component {
     );
   }
 }
-
-
-
-
-
 
 export default App;

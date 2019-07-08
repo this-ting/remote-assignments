@@ -3,12 +3,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
   background-color: #282c34;
   display: flex;
@@ -23,8 +17,6 @@
 }
 
 /* _______________________________________________________ */
-
-
 
 .logo {
   float: left;
@@ -48,6 +40,27 @@ nav {
   display: none;
 }
 
+nav ul li {
+  display: block;
+  text-decoration: none;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  height: 50px;
+  line-height: 3em;
+  padding:0 20px;
+  color: #fff;
+  transition: all 0.3s ease-out;
+}
+
+nav ul li a:hover,
+nav ul li a:hover
+{
+    color: #262626;
+}
+
 .fa-ellipsis-h {
   float: right;
   line-height: 3em;
@@ -56,11 +69,14 @@ nav {
   margin: auto; */
 }
 
+.fa-times {
+  float: right;
+  padding: 1em;
+}
 
-
-
-
-
+.fas:hover {
+  color: #BFBFBF;
+}
 
 
 /* ----------- Welcome Banner */
@@ -70,12 +86,8 @@ nav {
   line-height: 40vh;
   display: block;
   color: white;
-  font-size: 3em;
+  font-size: 2em;
 }
-
-
-
-
 
 /* ----------- Section Content Box */
 .section-title {
@@ -99,3 +111,159 @@ nav {
   width: 100%;
 }
 
+/* ----------- Call to Action button */
+div button {
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  margin: auto;
+  padding: 1em;
+
+}
+
+/* ----------- Hide Button Collapsible Content Boxes */
+.section-show {
+  display: none
+}
+
+/* ----------- Media Query */
+
+/*Request 3: Layout when screen width > 500px and < 800px*/
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    
+  /*Content Boxes in 2-columns layout.*/
+  .col {
+    width:50%;
+    margin-right: -40px;
+  }
+  
+
+  /* Increase font size for display*/
+.logo,
+  .fa-ellipsis-h {
+    font-size: 1.25em;
+  }
+
+
+  .welcome-banner {
+    color: yellow;
+    font-weight:bold;
+
+  }
+
+}
+
+
+
+/*Request 2: Layout when screen width > 800px and < 1200px*/
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+  
+  /*Content Boxes in 2-columns layout.*/
+  .col {
+    width:50%;
+    margin-right: -40px;
+  }
+  
+  /* Shows nav menu in words*/
+ nav {
+    display: contents;
+    padding-right: 1.5em;
+  }
+
+nav ul {
+    display: flex;
+    float:right;
+    list-style: none;
+  }
+
+nav ul li a {
+    height: 50px;
+    line-height: 3em;
+    padding:0 20px;
+    color: #fff; 
+    text-decoration: none;  
+  }
+
+
+  /* Increase font size for larger display*/
+  .logo,
+  nav ul li a {
+    font-size: 1em;
+  }
+
+  /* Hover option for nav menu */
+  nav ul li a:hover
+  {
+    color: #262626;
+  }
+
+  /* Hides nav menu icon*/
+  .fas {
+    visibility: hidden;
+  }
+  
+  .welcome-banner {
+    color: purple;
+    font-size: 4em;
+  }
+
+}
+
+/*Request 1: Layout when screen width > 1200px*/
+@media screen and (min-width: 1201px) {
+  
+  /*Total width of content boxes should be fixed in 1200px.*/
+  .section-container {
+    width: 1200px;
+  }
+  /*Content Boxes in 2-columns layout.*/
+  .col {
+    width:50%;
+    margin-right: -20px;
+  }
+  
+  /* Shows nav menu in words*/
+
+  nav {
+    display: contents;
+    padding-right: 1.5em;
+  }
+
+  nav ul {
+    display: flex;
+    float:right;
+    list-style: none;
+  }
+
+  nav ul li a {
+    height: 50px;
+    line-height: 3em;
+    padding:0 20px;
+    color: #fff; 
+    text-decoration: none;  
+  }
+
+
+  /* Increase font size for larger display*/
+  .logo,
+  nav ul li a {
+    font-size: 1.5em;
+  }
+
+  /* Hover option for nav menu */
+  nav ul li a:hover
+  {
+    color: #262626;
+  }
+
+  /* Hides nav menu icon*/
+  .fas {
+    visibility: hidden;
+  }
+  
+  .welcome-banner {
+    color: red;
+    font-size: 5em;
+  }
+
+}
