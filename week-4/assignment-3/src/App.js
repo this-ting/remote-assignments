@@ -1,21 +1,42 @@
 import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="Header-container">
-        <WelcomeLogo />
-        <Navigation />
-        <NavIcon />
-      </header>
-      <WelcomeBanner />
-      <h1 className="section-title"> Section Title</h1>
-      <SectionContent />
-      <ActionButton />
-      <Footer />
-    </div>
-  );
+class App extends React.Component {
+ state = {
+  navOpen: false
+ }
+ 
+  toggleMenu = () => {
+    console.log("I opened the menu");
+    this.setState((prevState) => {
+      return {navOpen: !prevState.navOpen};
+    })
+  }
+
+
+ render() {
+   let navIcon;
+   let navigation;
+
+  if (this.state.navOpen) {
+    navigation = <Navigation />
+  }
+
+    return (
+      <div className="App">
+        <header className="Header-container">
+          <WelcomeLogo />
+          {navigation}
+          <NavIcon toggleMenu={this.toggleMenu}/>
+        </header>
+        <WelcomeBanner />
+        <h1 className="section-title"> Section Title</h1>
+        <SectionContent />
+        <ActionButton />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 class WelcomeLogo extends React.Component {
@@ -27,61 +48,55 @@ class WelcomeLogo extends React.Component {
 }
 
 class Navigation extends React.Component {
+  state = {
+    visible: false
+  }
+
+  handleMouseDown(e) {
+    this.toggleMenu();
+
+    console.log("clicked");
+    e.stopPropagation();
+  }
+ 
+  toggleMenu = () => {
+    this.setState({
+      visible: !this.state.visible
+    })
+  }
+
   render() {
     return (
       <div>
         <nav id = "navigation">
           <ul>
-              <ExitIcon />
+              <ExitIcon toggleMenu={this.toggleMenu}/>
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
           </ul>
         </nav>
+
       </div>
     );
   }
 }
 
 class NavIcon extends React.Component {
-  state = {
-    showNav: false
-  }
-
-  showNav = () => {
-    console.log('can you see me?!?!?');
-    this.setState({
-      showNav: document.getElementById("navigation").style.display = "block"
-    });
-  }
-
   render() {
     return (
       <div>
-        <i class="fas fa-ellipsis-h" onClick={this.showNav}></i>
+        <i class="fas fa-ellipsis-h" onClick={this.props.toggleMenu}></i>
       </div>
     );
   }
 }
 
 class ExitIcon extends React.Component {
-  state = {
-    closeNav: true
-  }
-
-  
-  closeNav = () => {
-    console.log('SEE ME NOW?!?!?');
-    this.setState({
-      closeNav: document.getElementById("navigation").style.display = "none"
-    });
-  }
-  
-  
   render() {
     return (
       <div>
-        <i className="fas fa-times" onClick={this.closeNav}></i>
+        <i className="fas fa-times" onClick={this.props.toggleMenu}></i>
       </div>
     );
   }
