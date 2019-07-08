@@ -108,6 +108,11 @@ div button {
   display: none
 }
 
+/* ----------- Footer */
+footer {
+  padding-left: 1em;
+}
+
 /* ----------- Media Query */
 
 /*Request 3: Layout when screen width > 500px and < 800px*/
@@ -124,14 +129,7 @@ div button {
     clear: both;
   }
   
-
   /* Increase font size for display*/
-.logo,
-  .fa-ellipsis-h {
-    font-size: 1.25em;
-  }
-
-
   .welcome-banner {
     color: yellow;
     font-weight:bold;
@@ -139,8 +137,6 @@ div button {
   }
 
 }
-
-
 
 /*Request 2: Layout when screen width > 800px and < 1200px*/
 @media screen and (min-width: 801px) and (max-width: 1200px) {
@@ -168,7 +164,6 @@ nav ul li a {
     color: #fff; 
     text-decoration: none;  
   }
-
 
   /* Increase font size for larger display*/
   .logo,
@@ -226,7 +221,6 @@ nav ul li a {
     text-decoration: none;  
   }
 
-
   /* Hover option for nav menu */
   nav ul li a:hover
   {
@@ -237,7 +231,7 @@ nav ul li a {
   .fas {
     display:none;
   }
-  
+
   .welcome-banner {
     color: red;
     font-size: 5em;
