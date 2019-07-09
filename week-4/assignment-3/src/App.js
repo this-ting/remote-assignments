@@ -2,9 +2,24 @@ import React from 'react';
 import './App.css';
 
 class App extends React.Component {
- state = {
+ render() {
+    return (
+      <div className="App">
+        <HeaderContainer />
+        <WelcomeBanner />
+        <h1 className="section-title"> Section Title</h1>
+        <SectionContent />
+        <ActionButton />
+        <Footer />
+      </div>
+    );
+  }
+}
+
+class HeaderContainer extends React.Component {
+  state = {
   navOpen: false
- }
+  }
  
   toggleMenu = () => {
     console.log("I opened the menu");
@@ -13,28 +28,22 @@ class App extends React.Component {
     })
   }
 
-
- render() {
-   let navIcon;
-   let navigation;
-
-  if (this.state.navOpen) {
-    navigation = <Navigation />
+  closeMenu = () => {
+    console.log("I closed the menu");
+    this.setState({navOpen: false})
   }
 
+  render() {
+    let navigation;
+    if (this.state.navOpen) {
+      navigation = <Navigation closeMenu={this.closeMenu}/>
+    }
     return (
-      <div className="App">
-        <header className="Header-container">
-          <WelcomeLogo />
-          {navigation}
-          <NavIcon toggleMenu={this.toggleMenu}/>
-        </header>
-        <WelcomeBanner />
-        <h1 className="section-title"> Section Title</h1>
-        <SectionContent />
-        <ActionButton />
-        <Footer />
-      </div>
+      <header className="Header-container">
+        <WelcomeLogo />
+       {navigation}
+        <NavIcon toggleMenu={this.toggleMenu}/>
+      </header>
     );
   }
 }
@@ -49,36 +58,33 @@ class WelcomeLogo extends React.Component {
 
 class Navigation extends React.Component {
   state = {
-    visible: false
+    // navOpen: false
   }
 
-  handleMouseDown(e) {
-    this.toggleMenu();
-
-    console.log("clicked");
-    e.stopPropagation();
-  }
- 
-  toggleMenu = () => {
-    this.setState({
-      visible: !this.state.visible
-    })
-  }
+  // closeMenu = () => {
+  //   console.log("I closed the menu");
+  //   this.setState((prevState) => {
+  //     return {navOpen: !prevState.navOpen};
+  //   } );
+  // }
 
   render() {
-    return (
-      <div>
-        <nav id = "navigation">
-          <ul>
-              <ExitIcon toggleMenu={this.toggleMenu}/>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-
-      </div>
-    );
+    // let exitIcon;
+    // if (this.state.navClose) {
+    //   exitIcon = <ExitIcon closeMenu={this.closeMenu}/>
+    // }
+      return (
+        <div>
+          <nav id = "navigation" onClick={this.props.toggleMenu}>
+          <ExitIcon />
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      );
   }
 }
 
@@ -96,7 +102,7 @@ class ExitIcon extends React.Component {
   render() {
     return (
       <div>
-        <i className="fas fa-times" onClick={this.props.toggleMenu}></i>
+        <i className="fas fa-times" onClick={this.props.closeMenu}></i>
       </div>
     );
   }
